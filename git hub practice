@@ -1,0 +1,216 @@
+Last login: Wed Jan 18 12:46:12 on ttys000
+hannahs-MacBook-Air:~ hannahscott$ mkdir basic_repo
+hannahs-MacBook-Air:~ hannahscott$ git init
+Reinitialized existing Git repository in /Users/hannahscott/.git/
+hannahs-MacBook-Air:~ hannahscott$ touch indexx.html
+hannahs-MacBook-Air:~ hannahscott$ touch carnitas.txt
+hannahs-MacBook-Air:~ hannahscott$ touch magic.css
+hannahs-MacBook-Air:~ hannahscott$ vi carnitas.txt
+hannahs-MacBook-Air:~ hannahscott$ git remote add origin https://github.com/hanscotch/basic_repo
+fatal: remote origin already exists.
+hannahs-MacBook-Air:~ hannahscott$ git push origin master
+Username for 'https://github.com': hanscotch
+Password for 'https://hanscotch@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/hanscotch/tubulartriangles.git/'
+hannahs-MacBook-Air:~ hannahscott$ git remote add origin https://github.com/hanscotch/basic_repo
+fatal: remote origin already exists.
+hannahs-MacBook-Air:~ hannahscott$ git push origin master
+\Username for 'https://github.com': hanscotch
+Password for 'https://\hanscotch@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/hanscotch/tubulartriangles.git/'
+hannahs-MacBook-Air:~ hannahscott$ git init
+Reinitialized existing Git repository in /Users/hannahscott/.git/
+hannahs-MacBook-Air:~ hannahscott$ cd basic_repo
+hannahs-MacBook-Air:basic_repo hannahscott$ git commit -m "adding some random files to my first attempt at git"
+On branch master
+Untracked files:
+	../.CFUserTextEncoding
+	../.atom/
+	../.bash_history
+	../.bash_sessions/
+	../.cups/
+	../.gitconfig
+	../.viminfo
+	../Applications/
+	../Desktop/
+	../Documents/
+	../Downloads/
+	../Library/
+	../Movies/
+	../Music/
+	../Pictures/
+	../Public/
+	../README.md
+	../carnitas.txt
+	../index.html
+	../indexx.html
+	../magic.css
+	../new_Project/
+	../style.css
+	../test/
+
+nothing added to commit but untracked files present
+hannahs-MacBook-Air:basic_repo hannahscott$ git remote add origin https://github.com/hanscotch/basic_repo.git
+fatal: remote origin already exists.
+hannahs-MacBook-Air:basic_repo hannahscott$ git remote
+origin
+hannahs-MacBook-Air:basic_repo hannahscott$ git remote show basic_repo
+fatal: 'basic_repo' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+hannahs-MacBook-Air:basic_repo hannahscott$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+hannahs-MacBook-Air:basic_repo hannahscott$ git push --set-upstream origin master
+Username for 'https://github.com': hanscotch
+Password for 'https://hanscotch@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 533 bytes | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/hanscotch/tubulartriangles.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+hannahs-MacBook-Air:basic_repo hannahscott$ git push
+Everything up-to-date
+hannahs-MacBook-Air:basic_repo hannahscott$ git remote add origin https://github.com/hanscotch/basic_repo.gigt
+fatal: remote origin already exists.
+hannahs-MacBook-Air:basic_repo hannahscott$ git pull
+Auto packing the repository in background for optimum performance.
+See "git help gc" for manual housekeeping.
+Already up-to-date.
+hannahs-MacBook-Air:basic_repo hannahscott$ git remote
+origin
+hannahs-MacBook-Air:basic_repo hannahscott$ vi carnitas.txt
+hannahs-MacBook-Air:basic_repo hannahscott$ git commit -m "added some info to carnitas"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+	../.CFUserTextEncoding
+	../.atom/
+	../.bash_history
+	../.bash_sessions/
+	../.cups/
+	../.gitconfig
+	../.viminfo
+	../Applications/
+	../Desktop/
+	../Documents/
+	../Downloads/
+	../Library/
+	../Movies/
+	../Music/
+	../Pictures/
+	../Public/
+	../README.md
+	./
+	../carnitas.txt
+	../index.html
+	../indexx.html
+	../magic.css
+	../new_Project/
+	../style.css
+	../test/
+
+nothing added to commit but untracked files present
+hannahs-MacBook-Air:basic_repo hannahscott$ ls
+carnitas.txt
+hannahs-MacBook-Air:basic_repo hannahscott$ git add carnitas.txt
+hannahs-MacBook-Air:basic_repo hannahscott$ git commit -m "carnitas.txt updated"
+[master 540050c] carnitas.txt updated
+ Committer: hanscotch <hannahscott@hannahs-MacBook-Air.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 basic_repo/carnitas.txt
+hannahs-MacBook-Air:basic_repo hannahscott$ git commit --amend --reset-author
+error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+hannahs-MacBook-Air:basic_repo hannahscott$ git push
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 362 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/hanscotch/tubulartriangles.git
+   f09c91b..540050c  master -> master
+hannahs-MacBook-Air:basic_repo hannahscott$ git log
+commit 540050cb8de5e415e89c0bfe57f333d525a92663
+Author: hanscotch <hannahscott@hannahs-MacBook-Air.local>
+Date:   Wed Jan 18 18:17:34 2017 -0800
+
+    carnitas.txt updated
+
+commit f09c91b04aff87b330a09588468e916249399113
+Author: hannah scott <hannahscott@hannahs-MacBook-Air.local>
+Date:   Wed Jan 18 13:28:38 2017 -0800
+
+    aboutMe.txt added
+
+commit e4d27ab7a842559291fa886d48dda994bb166f4b
+Author: hannah scott <hannahscott@hannahs-MacBook-Air.local>
+Date:   Wed Jan 18 13:24:06 2017 -0800
+
+    changed my favorite movie mayve
+hannahs-MacBook-Air:basic_repo hannahscott$ commit c5c7a802f86e451eac3e979f28dd94001f483bc8
+-bash: commit: command not found
+hannahs-MacBook-Air:basic_repo hannahscott$ git log
+commit 540050cb8de5e415e89c0bfe57f333d525a92663
+Author: hanscotch <hannahscott@hannahs-MacBook-Air.local>
+Date:   Wed Jan 18 18:17:34 2017 -0800
+
+    carnitas.txt updated
+
+commit f09c91b04aff87b330a09588468e916249399113
+Author: hannah scott <hannahscott@hannahs-MacBook-Air.local>
+Date:   Wed Jan 18 13:28:38 2017 -0800
+
+    aboutMe.txt added
+
+commit e4d27ab7a842559291fa886d48dda994bb166f4b
+Author: hannah scott <hannahscott@hannahs-MacBook-Air.local>
+Date:   Wed Jan 18 13:24:06 2017 -0800
+
+    changed my favorite movie mayve
+hannahs-MacBook-Air:basic_repo hannahscott$ git remote add https://github.com/hanscotch/basic_repo.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+hannahs-MacBook-Air:basic_repo hannahscott$ git remote add -m c5c7a80
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+hannahs-MacBook-Air:basic_repo hannahscott$ 
